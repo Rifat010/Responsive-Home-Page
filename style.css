@@ -1,0 +1,1069 @@
+:root {
+     --bodyColor: #111122;
+     --primaryColor : #f1f1f1;
+     --secColor:#f8b90c;
+     --boxShadow:#f9c873;
+     --boxColor: #1c222a;
+}
+
+*::before, *::after, * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     list-style: none;
+     text-decoration: none;
+}
+body {
+     font-family: "Poppins", sans-serif;
+     background-color: var(--bodyColor);
+     font-size: 15px;
+}
+h1,h2,h3,h4,h5,h6 {
+     font-weight: 600;
+}
+img {
+     max-width: 100%;
+     height: auto;
+     object-fit: cover;
+}
+ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+.container {
+     width: 95%;
+     height: auto;
+     margin: auto;
+}
+.section-title {
+     text-align: center;
+}
+.section-title h2 {
+     color: var(--primaryColor);
+     text-transform: uppercase;
+     font-size: 55px;
+     font-weight: 550;
+}
+.section-title h3 {
+     color: var(--secColor);
+     text-transform: capitalize;
+     font-size: 20px;
+     margin-top: -10px;
+     margin-bottom: 30px;
+     text-align: center;
+     font-weight: 400;
+}
+
+
+/* =========================== */
+/* ============ Header Start =========== */
+/* ================================= */
+
+
+/* =========== navbar start========= */
+header {
+     width: 100%;
+     min-height: 100vh;
+}
+header .navbar-wraper {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px 0;
+}
+header .navbar .navbar-wraper .logo {
+     flex-basis: 140px;
+}
+header .navbar .navbar-wraper ul {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+}
+header .navbar ul li a {
+     display: block;
+     color: var(--primaryColor);
+     padding: 15px 20px;
+     border-radius: 30px;
+     font-weight: 600;
+     letter-spacing: .2px;
+}
+header .navbar ul li:last-child {
+     background-color: var(--secColor);
+     box-shadow: 0 0 5px var(--boxShadow);
+     border-radius: 30px;
+}
+header .navbar ul li a:hover {
+     background-color: var(--secColor);
+     box-shadow: 0 0 5px var(--boxShadow);
+}
+/*========= hero section============== */
+#hero-section .hero-wraper {
+     overflow: hidden;
+     padding: 100px 0;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     
+}
+#hero-section .hero-wraper .hero-content {
+     flex-basis: 50%;
+     padding-left: 10px;
+     margin-top: 100px;
+}
+#hero-section .hero-wraper .hero-content h3 {
+     color: var(--primaryColor);
+     text-transform: uppercase;
+     margin-left: -200px;
+     opacity: 0;
+     animation-name: hero-heading-3;
+     animation-duration: .7s;
+     animation-timing-function: linear;
+     animation-fill-mode: forwards;
+}
+#hero-section .hero-wraper .hero-content h1 {
+     color: var(--primaryColor);
+     font-size: 60px;
+     text-transform: uppercase;
+     position: relative;
+     top: 100px;
+     left: 0;
+     opacity: 0;
+     /* animation */
+     animation-name: hero-heading-1;
+     animation-duration: 1s;
+     animation-timing-function: linear;
+     animation-fill-mode: forwards;
+     animation-delay:1s;
+}
+#hero-section .hero-wraper .hero-content h2 {
+     color: var(--secColor);
+     margin-bottom: 10px;
+}
+#hero-section .hero-wraper .hero-content p {
+     color: var(--primaryColor);
+     line-height: 25px;
+     font-size: 15px;
+     text-align: left;
+     margin-bottom: 20px;
+     position: relative;
+     top: 100px;
+     left: 0;
+     opacity: 0;
+     /* animation */
+     animation-name: hero-heading-p;
+     animation-duration: 1s;
+     animation-timing-function: linear;
+     animation-fill-mode: forwards;
+     animation-delay:2s;
+
+}
+#hero-section .hero-wraper .hero-content .contact-btn {
+     position: relative;
+     top: 0;
+     left:0;
+     outline: none;
+     padding: 15px 40px;
+     background-color: var(--secColor);
+     border: none;
+     box-shadow: 0 0 5px var(--boxShadow);
+     border-radius: 30px;
+     color: var(--primaryColor);
+     font-size: 18px;
+     text-transform: capitalize;
+     font-weight: 600;
+     letter-spacing: .2px;
+     transition: .3s all;
+     z-index: 9999;
+
+     /* animation for the button */
+     animation-name: hero-button;
+     animation-duration: 3s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+     animation-timing-function: ease-in-out;
+
+}
+#hero-section .hero-wraper .hero-content .contact-btn:hover {
+     cursor: pointer;
+}
+
+/* keyframs for navbar contents */
+
+/* font the h3 heading */
+@keyframes hero-heading-3 {
+     form {
+          margin-left: -200px;
+          opacity: 0;
+     }
+     to {
+          margin-left: 0px;
+          opacity: 1;
+     }
+}
+/* for the h1 heading */
+@keyframes hero-heading-1 {
+     form {
+          top: 100px; 
+          left: 0;
+          opacity: 0;
+     }
+     to {
+          top: 0;
+          left: 0;
+          opacity: 1;
+     }
+}
+/* for the h1 heading */
+@keyframes hero-heading-p {
+     form {
+          top: 100px; 
+          left: 0;
+          opacity: 0;
+     }
+     to {
+          top: 0;
+          left: 0;
+          opacity: 1;
+     }
+}
+/* font the button*/
+@keyframes hero-button {
+     form {
+          top: 0;
+          opacity: 0;
+     }
+     to {
+          top: 30px;
+          opacity: 1;
+     }
+}
+/* ========== navbar end============ */
+
+/* ================ hero section start ============== */
+#hero-section .hero-wraper .hero-content .contact-btn:hover {
+     background-color: #262626;
+}
+
+/* hero image */
+#hero-section .hero-wraper .hero-img {
+     flex-basis: 50%;
+     position: relative;
+}
+#hero-section .hero-wraper .hero-img .experience {
+     width: 200px;
+     position: absolute;
+     bottom: -50px;
+     left: 0;
+     border: 2px solid var(--secColor);
+     padding:10px;
+     border-radius: 30px;
+     background-color: var(--bodyColor);
+     /* animation */
+     animation-name: experience;
+     animation-duration: 3s;
+     animation-direction: alternate;
+     animation-iteration-count: infinite;
+     animation-timing-function: ease-in-out;
+
+}
+#hero-section .hero-wraper .hero-img .experience h2 {
+     color: var(--primaryColor);
+     text-align: center;
+     font-size: 30px;
+     font-weight: 600;
+}
+#hero-section .hero-wraper .hero-img .experience span {
+     color: var(--secColor);
+     font-size: 14px;
+     text-align: center;
+     display: block;
+     text-transform: capitalize;
+     letter-spacing: .3px;
+     font-weight: 300;
+     line-height: 15px;
+}
+
+.prc {
+     width: 200px;
+     position: absolute;
+     bottom: -100px;
+     left: 250px;
+     border: 2px solid var(--secColor);
+     padding:10px;
+     border-radius: 30px;
+     background-color: var(--bodyColor);
+     /* animation */
+     animation-name: prc;
+     animation-duration: 3s;
+     animation-direction: alternate; 
+     animation-iteration-count: infinite;  
+     animation-timing-function: ease-in-out;
+}
+#hero-section .hero-wraper .hero-img .prc h2 {
+     color: var(--primaryColor);
+     text-align: center;
+     font-size: 30px;
+     font-weight: 600;
+}
+#hero-section .hero-wraper .hero-img .prc span {
+     color: var(--secColor);
+     font-size: 14px;
+     text-align: center;
+     display: block;
+     text-transform: capitalize;
+     letter-spacing: .3px;
+     font-weight: 300;
+     line-height: 15px;
+}
+/* Animation for experience div and for the prc div */
+@keyframes experience {
+     form {
+          bottom: -50px;
+          left: 0px;
+
+     }
+     to {
+          bottom:-20px;
+          left: 20px;
+
+     }
+}
+@keyframes prc {
+     form {
+          bottom: -100px;
+          left: 250px;
+
+
+     }
+     to {
+          bottom: -80px;
+          left: 230px;     
+     }
+}
+/* =========== hero section end =============== */
+
+
+/* ========================== */
+/* ========= Header End====== */
+/* =============================== */
+
+
+/* ================================ */
+/* ============ Main Start ============= */
+/* /================================= */
+
+
+/* ========== service section start ==========*/
+/* ========== service wraper ========== */
+.servies-wraper {
+     padding: 100px 0;
+     overflow: hidden;
+}
+/* ========= section title start ========*/
+
+/* =========== section title end */
+/* =========== service boxes start === */
+.servies-wraper .service-boxes {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     column-gap: 20px;
+}
+.servies-wraper .service-boxes > .box {
+     padding: 30px;
+     background-color: var(--boxColor);
+     color: var(--primaryColor);
+     border-radius: 10px;
+}
+.servies-wraper .service-boxes > .box > div > i {
+     font-size: 50px;
+     color: var(--secColor);
+     margin-bottom: 10px;
+}
+.servies-wraper .service-boxes > .box > h3 {
+     text-transform: uppercase;
+     margin: 10px 0;
+     font-size: 20px;
+}
+.servies-wraper .service-boxes > .box > p {
+     font-size: 14px;
+     letter-spacing: .3px;
+     line-height: 22px;
+     margin-bottom: 20px;
+}
+.servies-wraper .service-boxes > .box > div > a {
+     color: var(--primaryColor) ;
+     padding-right: 10px;
+     display: inline-block;
+     text-transform: capitalize;
+     font-size: 14px;
+     font-weight: 600;
+     letter-spacing: .3px;
+     transition: .3s all;
+}
+.servies-wraper .service-boxes > .box > div > a:hover {
+     color: var(--secColor) ;
+}
+.servies-wraper .service-boxes > .box > div > a > i {
+     color: var(--secColor);
+     padding-left: 10px;
+}
+
+/* servie box 1 */
+.service-box1 {
+     position: relative;
+     top: 0;
+     left: -200px;
+     opacity: 0;
+     animation-name: service-box1;
+     animation-duration: 1.3s;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+}
+/* servie box 2 */
+.service-box2 {
+     position: relative;
+     bottom: -200px;
+     left: 0;
+     opacity: 0;
+     animation-name: service-box2;
+     /* animation-delay: .3 ; */
+     animation-duration: 1.4s;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+}
+/* servie box 3 */
+.service-box3 {
+     position: relative;
+     top: 0;
+     right: -200px;
+     opacity: 0;
+     animation-name: service-box3;
+     animation-duration: 1.3s;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+}
+
+/* Keyframes for Services Boxes */
+/* for the service box 1 */
+@keyframes service-box1 {
+     form {
+          top: 0;
+          left: -200px;
+          opacity: 0;
+     }
+     to {
+          top: 0;
+          left: 0;
+          opacity: 1;
+     }
+}
+/* for the service box 2 */
+@keyframes service-box2 {
+     form {
+          bottom: -200px;
+          left: 0;
+          opacity: 0;
+     }
+     to {
+          bottom: 0;
+          left: 0;
+          opacity: 1;
+     }
+}
+/* for the service box 3 */
+@keyframes service-box3 {
+     form {
+          top: 0;
+          right: -200px;
+          opacity: 0;
+     }
+     to {
+          top: 0;
+          right: 0;
+          opacity: 1;
+     }
+}
+
+
+/* =========== service boxes end === */
+/* ========== service section end ==========*/
+
+/* =========== protfolio section start ======== */
+/* #protfolio-section {} */
+.protfolio-wraper {
+     padding-bottom: 100px;
+     overflow: hidden;
+}
+.protfolio-boxes {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     column-gap: 20px;
+}
+.protfolio-boxes .protfolio-div {
+     background-color: var(--boxColor);
+     padding: 30px;
+     border-radius: 10px;
+}
+.protfolio-boxes .protfolio-div > .protfolio-img {
+     border-radius: 10px;
+     overflow: hidden;
+     margin-bottom: 20px;
+}
+
+.protfolio-boxes .protfolio-div > .protfolio-img img {
+     border-radius: 10px;
+     transition: .3s ease;
+}
+
+.protfolio-boxes .protfolio-div > .protfolio-img img:hover {
+     transform: scale(1.2);
+     cursor: zoom-in;
+}
+
+.protfolio-boxes .protfolio-div h3 {
+     color: var(--secColor);
+     text-transform: uppercase;
+     margin-bottom: 20px;
+     font-size: 1rem;
+}
+
+.protfolio-boxes .protfolio-div h2 {
+     color: var(--primaryColor);
+     text-transform: capitalize;
+     margin-bottom: 20px;
+     font-size: 1.3rem;
+}
+
+.protfolio-boxes .protfolio-div .protfolio-link  a{
+    color: var(--primaryColor);
+    text-transform: capitalize;
+    letter-spacing: .4px;  
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s ease;
+    display: inline-block;
+}
+
+.protfolio-boxes .protfolio-div .protfolio-link  a:hover {
+     color: var(--secColor);
+}
+
+.protfolio-boxes .protfolio-div .protfolio-link  i {
+     color: var(--secColor);
+     margin-left: 10px;
+}
+
+/* protfolio box 1 */
+.protfolio-1{
+  position: relative;
+  top: 0;
+  left: -250px;
+  opacity: 0;
+  /* animation */
+  animation-name: protfolio1;
+  animation-duration: 1.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+/* protfolio box 2 */
+.protfolio-2{
+     position: relative;
+     bottom: -250px;
+     left: 0;
+     opacity: 0;
+     /* animation */
+     animation-name: protfolio2;
+     animation-duration: 1.4s;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+}
+
+/* protfolio box 3 */
+.protfolio-3{
+     position: relative;
+     top: 0;
+     right: -250px;
+     opacity: 0;
+     /* animation */
+     animation-name: protfolio3;
+     animation-duration: 1.3s;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+   }
+
+
+/* Keyframes for the Protfolio boxes */
+/* protfolio1 */
+@keyframes  protfolio1{
+     form {
+          top: 0;
+          left: -250px;
+          opacity: 0;
+     }
+     to {
+          top: 0;
+          left: 0;
+          opacity: 1;
+     }
+}
+
+/* protfolio2 */
+@keyframes  protfolio2{
+     form {
+          bottom: -250px;
+          left: 0;
+          opacity: 0;
+     }
+     to {
+          bottom: 0;
+          left: 0;
+          opacity: 1;
+     }
+}
+
+/* protfolio3 */
+@keyframes  protfolio3{
+     form {
+          top: 0;
+          right: -250px;
+          opacity: 0;
+     }
+     to {
+          top: 0;
+          right: 0;
+          opacity: 1;
+     }
+}
+/* =========== protfolio section end ======== */
+
+/* ============ testimonial section start ============ */
+/* #testimonial-section{} */
+.testimonial-wraper {
+     padding-bottom: 100px;
+}
+
+.testimonial-wraper .testimonial-boxess {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     column-gap: 20px;
+}
+
+.testimonial-wraper .testimonial-boxess .testimonial-box {
+     background-color: var(--boxColor);
+     padding: 30px;
+     border-radius: 10px;
+}
+
+.testimonial-wraper .testimonial-boxess .testimonial-box > p {
+     color: var(--primaryColor);
+     margin-bottom: 40px;
+     font-size: 15px;
+}
+
+.testimonial-wraper .testimonial-boxess .testimonial-box > .testimonial-img img {
+   border-radius: 50%;
+     margin-bottom: 10px;
+}
+
+.testimonial-wraper .testimonial-boxess .testimonial-box > h3 {
+     color: var(--secColor)
+}
+.testimonial-wraper .testimonial-boxess .testimonial-box > h2 {
+     color: var(--primaryColor)
+}
+
+/* testimonial box 1 */
+.testimonial-1 {
+     position: relative;
+      top: 0;
+      left: -250px;
+      opacity: 0;
+     /* animaiton */
+     animation-name: testimonial1;
+     animation-duration: 1.3s;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+ }
+/* testimonial box 2 */
+.testimonial-2 {
+     position: relative;
+      bottom: -250px;
+      left: 0;
+      opacity: 0;
+     /* animaiton */
+     animation-name: testimonial2;
+     animation-duration: 1.4s;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+ }
+/* testimonial box 3 */
+.testimonial-3 {
+     position: relative;
+      top: 0;
+      right: -250px;
+      opacity: 0;
+     /* animaiton */
+     animation-name: testimonial3;
+     animation-duration: 1.3s;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+ }
+   
+
+/* keyframes for the testimonial boxess */
+@keyframes testimonial1 {
+     form {
+          top: 0;
+          left: -250px;
+          opacity: 0;
+     }
+     to {
+          top: 0;
+          left: 0;
+          opacity: 1;
+     }
+}
+@keyframes testimonial2 {
+     form {
+          bottom: -250px;
+          left: 0;
+          opacity: 0;
+     }
+     to {
+          bottom: 0;
+          left: 0;
+          opacity: 1;
+     }
+}
+@keyframes testimonial3 {
+     form {
+          top: 0;
+          right: -250px;
+          opacity: 0;
+     }
+     to {
+          top: 0;
+          right: 0;
+          opacity: 1;
+     }
+}
+/* =============== testimonial section end ============= */
+
+/* ================ contact secton start ================= */
+/* #contact-section {} */
+.contact-wraper {
+     padding-bottom: 30px;
+}
+
+.contact-wraper .contact-boxess {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     column-gap: 20px;
+}
+
+.contact-wraper .contact-boxess > div {
+     background-color: var(--boxColor);
+     padding: 30px;
+     border-radius: 10px;
+     text-align: center;
+}
+
+.contact-wraper .contact-boxess > div > div{
+     text-align: center;
+     margin-bottom: 10px;
+}
+
+.contact-wraper .contact-boxess > div > div > i {
+     display: inline-block;
+     font-size: 30px;
+     color: var(--secColor);
+}
+
+.contact-wraper .contact-boxess > div > h2 {
+     color: var(--primaryColor);
+     text-transform: capitalize;
+     font-size: 25px;
+}
+
+.contact-wraper .contact-boxess > div > p {
+     color: var(--primaryColor);
+     text-transform: capitalize;
+     font-weight: 300;
+     letter-spacing: .3px;
+}
+
+/* contact box1 */
+.contact-box1 {
+     position: relative;
+     top: 0;
+     left: -250px;
+     opacity: 0;
+     /* animation */
+     animation-name: contact-box1;
+     animation-duration: 1.3s;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+}
+
+/* contact box2 */
+.contact-box2 {
+     position: relative;
+     bottom: -250px;
+     left: 0;
+     opacity: 0;
+     /* animation */
+     animation-name: contact-box2;
+     animation-duration: 1.4s;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+}
+
+/* contact box3 */
+.contact-box3 {
+     position: relative;
+     top: 0;
+     right: -250px;
+     opacity: 0;
+     /* animation */
+     animation-name: contact-box3;
+     animation-duration: 1.3s;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+}
+
+
+/* keyframes for the contact boxess */
+
+@keyframes contact-box1 {
+     form {
+          top: 0;
+          left: -250px;
+          opacity: 0;   
+     }
+     to {
+          top: 0;
+          left: 0;
+          opacity: 1; 
+     }
+}
+@keyframes contact-box2 {
+     form {
+          bottom: -250px;
+          left: 0;
+          opacity: 0;
+     }
+     to {
+          bottom: 0;
+          left: 0;
+          opacity: 1;
+     }
+}
+@keyframes contact-box3 {
+     form {
+          top: 0;
+          right: -250px;
+          opacity: 0;
+     }
+     to {
+          top: 0;
+          right: 0;
+          opacity: 1;
+     }
+}
+/* ================ contact section end ================== */
+
+/* ================================ */
+/* ============ Main End ============= */
+/* /================================= */
+
+/* ================================ */
+/* ============ Footer Start ============= */
+/* /================================= */
+footer {
+     background-color: var(--boxColor);
+     padding-top: 20px;
+     padding-bottom: 20px;
+}
+
+footer .footer-wraper {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+/* footer social area */
+footer .footer-wraper .social {
+     flex-basis: 230px;
+}
+footer .footer-wraper .social > ul {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     flex-wrap: wrap;
+}
+
+footer .footer-wraper .social > ul > li > a {
+     display: block;
+     background-color: var(--primaryColor);
+     padding: 11px 15px;
+     margin-bottom: 10px;
+     border-radius: 50%;
+     transition: .4s linear;
+     color: var(--boxColor);
+     box-shadow: 0 0 4px var(--primaryColor);
+}
+footer .footer-wraper .social > ul > li > a:hover {
+     background-color: var(--secColor);
+     color: var(--primaryColor);
+     box-shadow: 0 0 4px var(--secColor);
+}
+
+
+/* footer copyright  area*/
+footer .footer-wraper .copy_right {
+     flex-basis: 350px;
+}
+footer .footer-wraper .copy_right > p {
+    color: var(--secColor)
+}
+
+/* ================================ */
+/* ============ Footer End ============= */
+/* /================================= */
+
+@media screen and (max-width: 767px) {
+     header .navbar-wraper {
+          flex-direction: column;
+     }
+
+     header .navbar .navbar-wraper ul {
+          display: none;
+     }
+
+     header .navbar .navbar-wraper .logo {
+          text-align: center;
+          flex-basis: 0;
+     }
+
+     header .navbar .navbar-wraper .logo img {
+          max-width: 70%;
+     }
+
+     .logo {
+          height: 0;
+     }
+
+     /* Navbar end */
+
+     #hero-section .hero-wraper {
+          grid-template-columns: auto;
+          justify-content: center;
+     }
+
+     #hero-section .hero-wraper .hero-content {
+          order: 2;
+     }
+
+     #hero-section .hero-wraper .hero-img {
+          order: 1;
+     }
+
+     /* Hero contents */
+
+     #hero-section .hero-wraper .hero-content h1 {
+          font-size: 40px;
+     }
+
+     #hero-section .hero-wraper .hero-content h3 {
+          font-size: 15px;
+     }
+
+     #hero-section .hero-wraper .hero-content h2 {
+          font-size: 20px;
+     }
+
+     #hero-section .hero-wraper .hero-content p {
+          font-size: 14px;
+     }
+
+     #hero-section .hero-wraper .hero-img .experience {
+          display: none;
+          animation-name: none;
+     }
+
+     #hero-section .hero-wraper .hero-img .prc {
+          display: none;
+          animation-name: none;
+     }
+
+     /* ==========================
+        =========== Section Title ========== */
+
+     .section-title h2 {
+          font-size: 2.5rem;
+     }
+
+     .section-title h3 {
+          font-size: 1rem;
+     }
+
+     /* ==========================
+        =========== Service Section Start =========== */
+
+     .servies-wraper .service-boxes {
+          grid-template-columns: auto;
+          row-gap: 20px;
+     }
+
+     /* =========== Service Section End =========== */
+
+     /* ============ Protfolio Section Start ============= */
+     .protfolio-boxes {
+          grid-template-columns: auto;
+          row-gap: 20px;
+     }
+     /* ============== Protfoilo Section End ============== */
+
+     /* ============= testimonial section start ============== */
+     .testimonial-wraper .testimonial-boxess {
+          grid-template-columns: auto;
+          row-gap: 20px;
+     }    
+     /* ============= testimonial section end ============== */
+
+     /* ============= Contact Secton Start ================= */
+     .contact-wraper .contact-boxess {
+          grid-template-columns: auto;
+          row-gap: 20px;
+     }
+     /* ============= Contact Secton End ================= */
+
+     /* ============== Footer Section Start ================ */
+     footer {
+     padding-left: 20px;
+     padding-right: 20px;
+     }
+     footer .footer-wraper {
+          flex-wrap: wrap;
+          row-gap: 20px;
+          justify-content: center;
+          align-items: flex-start;
+     }
+     footer .footer-wraper .copy_right > p {
+          text-align: center;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
